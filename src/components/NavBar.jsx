@@ -1,7 +1,6 @@
 /* eslint-disable react/prop-types */
 
-import MenuButton from "./Menu/MenuButton";
-
+import MenuButton from "./menu/MenuButton";
 export default function NavBar({
   onSectionChange,
   isMenuOpened,

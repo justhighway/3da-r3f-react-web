@@ -5,7 +5,7 @@ const ResponsiveCanvas = () => {
   /* useThree 훅을 사용하여 React Three Fiber에서 제공하는
      Three.js의 camera(카메라)와 gl(WebGLRenderer) 객체를 가져옴 
      camera 객체: 씬을 렌더링할 때 사용할 카메라를 나타내고,
-     gl 객체: 실제로 WebGL을 사용하여 씬을 렌더링 */
+     gl 객체: WebGL을 사용하여 씬을 실제로 렌더링 */
   const { camera, gl } = useThree();
 
   useEffect(
@@ -50,7 +50,7 @@ const ResponsiveCanvas = () => {
 
     /* 의존성 배열:
     camera와 gl 객체가 변경될 때마다 useEffect hook이 다시 실행됨
-    여기서는 camera와 gl이 변경되지 않지만, 이들을 명시적으로 포함하여 의존성을 관리 */
+    여기서는 camera와 gl 값이 변경되지 않지만 명시적으로 포함하여 의존성 관리 */
     [camera, gl]
   );
 

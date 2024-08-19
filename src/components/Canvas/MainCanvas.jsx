@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Canvas } from "@react-three/fiber";
 import ResponsiveCanvas from "./ResponsiveCanvas";
 import MainScene from "@components/MainScene";
-import Lights from "@components/Lights";
+import Lights from "@components/Canvas/Lights";
 import NavBar from "@components/NavBar";
 import { OrbitControls } from "@react-three/drei";
 
@@ -28,6 +28,7 @@ const MainCanvas = () => {
         <Lights />
         <ResponsiveCanvas />
         <MainScene section={section} setSection={setSection} />
+        {/* <OrbitControls /> */}
       </Canvas>
       <NavBar
         onSectionChange={setSection}

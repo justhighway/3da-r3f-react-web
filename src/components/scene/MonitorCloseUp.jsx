@@ -45,41 +45,43 @@ export default function MonitorCloseUp({ section }) {
       tl.current.to(
         groupRef.current.position,
         {
-          duration: 4,
-          z: 5,
-          x: 2,
+          duration: 5,
+          z: 2.0,
+          x: 3.6,
         },
         1
       );
 
-      // tl.current.to(
-      //   groupRef.current.rotation,
-      //   {
-      //     duration: 4,
-      //     y: -1,
-      //   },
-      //   "<"
-      // );
+      tl.current.to(
+        groupRef.current.rotation,
+        {
+          duration: 5,
+          y: 0.8,
+          z: 0.02,
+        },
+        "<"
+      );
 
-      // 섹션 3에도 동일한 애니메이션 적용
+      // // 섹션 3에도 동일한 애니메이션 적용
       tl.current.to(
         groupRef.current.position,
         {
-          duration: 4,
-          z: 5, // 섹션 2의 z값과 동일하게 유지
-          x: 2, // 섹션 2의 x값과 동일하게 유지
+          duration: 5,
+          z: 2.0, // 섹션 2의 z값과 동일하게 유지
+          x: 3.6, // 섹션 2의 x값과 동일하게 유지
         },
-        5 // 섹션 3 시작 시점을 타임라인에서 설정
+        7 // 섹션 3 시작 시점을 타임라인에서 설정
       );
 
-      // tl.current.to(
-      //   groupRef.current.rotation,
-      //   {
-      //     duration: 4,
-      //     y: -1, // 섹션 2의 회전값과 동일하게 유지
-      //   },
-      //   "<"
-      // );
+      tl.current.to(
+        groupRef.current.rotation,
+        {
+          duration: 5,
+          y: 0.8, // 섹션 2의 회전값과 동일하게 유지
+          z: 0.02,
+        },
+        "<"
+      );
     }
 
     return () => {
